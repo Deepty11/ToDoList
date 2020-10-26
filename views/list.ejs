@@ -1,0 +1,25 @@
+<%-include('header')%>
+    <div class="headline-div">
+        <h1>
+            <%=listTitle%>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="itemsBlock">
+            <%for(var i=0;i<ListOfTasks.length;i++){%>
+                <div class="">
+                    <input type="checkbox">
+                    <label class="strikeThrough"><%=ListOfTasks[i]%></label>
+                </div>
+                <hr>
+                <%}%>
+                    <form action="/" method="POST">
+                        <input type="text" name="task" placeholder="New" autocomplete="off">
+                        <button type="submit" name="list" value=<%=listTitle%>> +</button>
+                    </form>
+        </div>
+
+    </div>
+
+
+    <%-include("footer")%>

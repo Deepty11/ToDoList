@@ -1,0 +1,58 @@
+body {
+    height: 100%;
+    background-image: -webkit-linear-gradient( 65deg, rgb(252, 122, 0) 40%, rgb(235, 235, 235) 60%)
+}
+
+h1 {
+    color: chocolate;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    padding: 10px;
+    color: purple;
+    text-shadow: 2px 2px;
+}
+
+.itemsBlock {
+    margin: 10px auto 20px;
+    background-color: cornsilk;
+    padding: 25px 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(199, 195, 195);
+}
+
+.headline-div {
+    margin-top: 200px;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"]:checked+label.strikeThrough {
+    text-decoration: line-through;
+}
+
+button {
+    border-radius: 50%;
+    background-color: darkcyan;
+    color: white;
+    border-style: none;
+    margin-left: 20px;
+    width: 2.2rem;
+    height: 100%;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 80%;
+    border-width: 0ch;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 5px 10px 5px 20px;
+}
