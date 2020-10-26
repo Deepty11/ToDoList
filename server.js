@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
+const date = require(__dirname + "/date.js");
 
 // const daysInWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var listOfTasks = ["Go roaming around", "Eat food", "Play Piano", "Listen to song", "Finish up due works"];
@@ -14,16 +15,12 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-    let date = new Date();
+    let dateOfToday = date.getDate();
     let today = date.getDay();
-    let options = {
-        day: 'numeric',
-        weekday: 'long',
-        month: 'long',
-        year: 'numeric'
-    };
 
-    res.render('list', { listTitle: date.toLocaleString("en-US", options), ListOfTasks: listOfTasks });
+
+    res.render('list', { listTitle: dateOfToday, ListOfTasks: listOfTasks }); //date() = parenthesis to call the fucntion described in date.js
+
 
 });
 app.get("/work", function(req, res) {
