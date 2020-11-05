@@ -6,13 +6,18 @@
     </div>
     <div class="row">
         <div class="itemsBlock">
-            <%for(var i=0;i<ListOfTasks.length;i++){%>
+            <%ListOfTasks.forEach(function(tasks){%>
                 <div class="">
-                    <input type="checkbox">
-                    <label class="strikeThrough"><%=ListOfTasks[i]%></label>
+
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="title" value=<%=listTitle%>>
+                        <input type="checkbox" name="checkbox" value="<%=tasks.name%>" onchange="this.form.submit()">
+                        <label class="strikeThrough"><%=tasks.name%></label>
+                    </form>
+
                 </div>
-                <hr>
-                <%}%>
+                <% })%>
+
                     <form action="/" method="POST">
                         <input type="text" name="task" placeholder="New" autocomplete="off">
                         <button type="submit" name="list" value=<%=listTitle%>> +</button>
