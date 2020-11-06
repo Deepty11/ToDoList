@@ -8,7 +8,21 @@ const date = require(__dirname + "/date.js");
 // const daysInWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 // var listOfTasks = ["Go roaming around", "Eat food", "Play Piano", "Listen to song", "Finish up due works"];
 // var works = [];
-mongoose.connect("mongodb://localhost:27017/ToDoList", {
+
+
+//connect using mongodb localhost:27017
+// mongoose.connect("mongodb://localhost:27017/ToDoList", {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
+
+//using mongodb atlas to host the application in cloud version of mongodb
+// you may check the database over mongodb atlas in cluster0
+//User info:
+//Username: admin-deepty
+//password:abcd1234
+//Notice: the username and password of the user is added inside the url part of the mongoose.connect() method
+mongoose.connect("mongodb+srv://admin-deepty:abcd1234@cluster0.uxtrt.mongodb.net/ToDoList", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
